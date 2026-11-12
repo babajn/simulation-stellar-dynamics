@@ -77,6 +77,26 @@ python scripts/check_release.py
 
 ## 参考資料
 
+講義スライドで紹介した教科書を、学習する内容に合わせて以下にまとめます。まず全体像を『シミュレーション天文学』で確認し、銀河動力学には *Galactic Dynamics*、数値解法の理論には *Solving Ordinary Differential Equations I* を参照すると、本教材と対応づけて読み進められます。
+
+### 教科書
+
+| 分野 | 書籍 | 本教材との対応 |
+|---|---|---|
+| 全体像 | 富阪幸治・花輪知幸・牧野淳一郎 編『シミュレーション天文学』、シリーズ現代の天文学14、日本評論社（[出版社案内：第2版](https://www.nippyo.co.jp/shop/book/9774.html)） | 数値計算の基礎と天文学への応用。ex01–08の背景 |
+| 微分方程式の基礎 | Erwin Kreyszig, [*Advanced Engineering Mathematics*](https://www.wiley.com/en-us/advanced-engineering-mathematics-10th-edition-p-9781119455929), Wiley。邦訳『技術者のための高等数学1 常微分方程式』、培風館 | ODEの解析的な扱い、初期値問題。ex01–04の前提 |
+| ODEの数値解法 | Ernst Hairer, Syvert P. Nørsett & Gerhard Wanner, [*Solving Ordinary Differential Equations I: Nonstiff Problems*](https://link.springer.com/book/10.1007/978-3-540-78862-1), 2nd ed., Springer, 1993。邦訳『常微分方程式の数値解析 I 基礎編』 | Runge–Kutta法、多段階法、誤差・収束。ex01–05 |
+| 銀河動力学 | James Binney & Scott Tremaine, [*Galactic Dynamics*](https://press.princeton.edu/books/paperback/9780691130279/galactic-dynamics), 2nd ed., Princeton University Press, 2008 | 軌道、重力ポテンシャル、無衝突系と緩和。ex05–08の物理的背景 |
+| 星団の力学 | Lyman Spitzer, Jr., [*Dynamical Evolution of Globular Clusters*](https://press.princeton.edu/books/ebook/9781400858736/dynamical-evolution-of-globular-clusters-pdf), Princeton University Press, 1987 | 二体緩和と球状星団の進化。講義の衝突系の説明 |
+| 重力多体系 | Douglas Heggie & Piet Hut, [*The Gravitational Million-Body Problem*](https://assets.cambridge.org/97805217/74864/frontmatter/9780521774864_frontmatter.pdf), Cambridge University Press, 2003（リンクは出版社の序文） | 星団の重力多体問題と数値的な扱い。軌道積分・緩和の発展学習 |
+| 粒子法と重力計算 | R. W. Hockney & J. W. Eastwood, [*Computer Simulation Using Particles*](https://www.routledge.com/Computer-Simulation-Using-Particles/Hockney-Eastwood/p/book/9780367806934), 1988 | Particle–Mesh法、FFT、粒子間相互作用。講義のPM法と重力計算 |
+| 解析力学 | L. D. Landau & E. M. Lifshitz, [*Mechanics*](https://shop.elsevier.com/books/mechanics/landau/978-0-08-050347-9), Course of Theoretical Physics, Vol. 1。邦訳『力学』、東京図書 | 保存則、中心力運動、Hamilton形式。ex05の前提と発展 |
+| 古典力学 | Herbert Goldstein, *Classical Mechanics*（[出版社案内：Goldstein, Poole & Safkoによる第3版](https://www.pearson.com/en-gb/subject-catalog/p/classical-mechanics-pearson-new-international-edition/P200000004309/9781292038933)）。邦訳『古典力学 上・下』、吉岡書店 | 中心力問題、正準方程式、解析力学。ex05とシンプレクティック法の背景 |
+
+出版社リンクには講義当時とは異なる版も含まれます。『シミュレーション天文学』のリンク先は2026年刊行の第2版です。邦訳と原著の対応する版・章番号は、利用する本で確認してください。
+
+### 論文・実装資料
+
 - [Dehnen & Read (2011), N-body simulations of gravitational dynamics](https://arxiv.org/abs/1105.1082)
 - [Hernquist & Ostriker (1992), A self-consistent field method for galactic dynamics](https://adsabs.harvard.edu/abs/1992ApJ...386..375H)
 - [SciPyの球面調和関数の定義](https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.sph_harm_y.html)
