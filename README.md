@@ -98,6 +98,9 @@ python scripts/check_release.py
 - [Hernquist & Ostriker (1992), A self-consistent field method for galactic dynamics](https://adsabs.harvard.edu/abs/1992ApJ...386..375H)
 - [SciPyの球面調和関数の定義](https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.sph_harm_y.html)
 
+- [galaxy-interaction-course](https://github.com/babajn/galaxy-interaction-course/tree/main)：Pythonによるテスト粒子銀河相互作用の実習教材。
+- [galactic-dynamics-numerical-methods](https://github.com/babajn/galactic-dynamics-numerical-methods)：銀河動力学の数値手法に関する関連リポジトリ。
+
 出版社リンクには講義当時とは異なる版も含まれます。邦訳と原著の対応する版・章番号は、利用する本で確認してください。
 
 論文PDFの再配布はせず、出典へのリンクを掲載しています。
