@@ -14,7 +14,7 @@ Pythonの基本的な文法、微積分、ベクトル、Newton力学の初歩�
 
 ## 講義スライド
 
-[講義スライドPDF](docs/lecture_baba_all.pdf)（117ページ、約12 MB）と、[正誤表・Notebookとの対応](docs/lecture-slides.md) を公開しています。PDFは2024年度の講義時の原版です。数式の訂正や改訂Notebookとの違いを正誤表にまとめていますので、必ず併せて参照してください。
+[講義スライドPDF](docs/lecture_baba_all.pdf)（89ページ、約31 MB）と、[正誤表・Notebookとの対応](docs/lecture-slides.md) を公開しています。PDFは2024年度の講義資料から、講義案内や付録などを省いた公開版です。数式の訂正や改訂Notebookとの違いを正誤表にまとめていますので、必ず併せて参照してください。
 
 ## 学習順序
 

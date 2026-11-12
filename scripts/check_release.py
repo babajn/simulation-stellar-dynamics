@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 # Exact reviewed asset only. Review PDF text, metadata, links and page images
 # before updating this digest; arbitrary PDFs remain excluded.
 REVIEWED_ASSETS={
- 'docs/lecture_baba_all.pdf':'1c83dfab1a6fa09dfc582fbc188a193e3bbbb30651d0e2d6b37b8e7ba802772d',
+ 'docs/lecture_baba_all.pdf':'c92a6cb639a83f54156e9f86e39f2279f8298f42fbef348fd8e73e20f2bf79d4',
 }
 SKIP={'.git','build','.venv','venv','__pycache__','.ipynb_checkpoints'}
 PATTERNS={
