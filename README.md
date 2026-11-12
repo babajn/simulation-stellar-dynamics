@@ -99,6 +99,4 @@ python scripts/check_release.py
 - [SciPyの球面調和関数の定義](https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.sph_harm_y.html)
 
 ## 関連する公開教材
-- 馬場淳一『[シミュレーション天文学：銀河動力学を中心に](https://github.com/babajn/simulation-stellar-dynamics)』（2024年度 総研大講義資料）
 - 馬場淳一『[銀河力学で学ぶ数値計算法](https://github.com/babajn/galactic-dynamics-numerical-methods)』（2026年度 鹿児島大学物理宇宙セミナー資料）
-
