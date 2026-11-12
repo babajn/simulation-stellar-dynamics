@@ -77,31 +77,27 @@ python scripts/check_release.py
 
 ## 参考資料
 
-講義スライドで紹介した教科書を、学習する内容に合わせて以下にまとめます。まず全体像を『シミュレーション天文学』で確認し、銀河動力学には *Galactic Dynamics*、数値解法の理論には *Solving Ordinary Differential Equations I* を参照すると、本教材と対応づけて読み進められます。
+講義スライドで紹介した教科書と、関連する論文・実装資料を以下にまとめます。まず全体像を『シミュレーション天文学』で確認し、銀河動力学には *Galactic Dynamics*、数値解法の理論には *Solving Ordinary Differential Equations I* を参照すると、本教材と対応づけて読み進められます。
 
-### 教科書
-
-- **全体像**：富阪幸治・花輪知幸・牧野淳一郎 編『シミュレーション天文学』、シリーズ現代の天文学14、日本評論社（[出版社案内：第2版](https://www.nippyo.co.jp/shop/book/9774.html)）
+- 富阪幸治・花輪知幸・牧野淳一郎 編『シミュレーション天文学』、シリーズ現代の天文学14、日本評論社（[出版社案内：第2版](https://www.nippyo.co.jp/shop/book/9774.html)）
   数値計算の基礎と天文学への応用。ex01–08の背景。
 
-- **ODEの数値解法**：Ernst Hairer, Syvert P. Nørsett & Gerhard Wanner, [*Solving Ordinary Differential Equations I: Nonstiff Problems*](https://link.springer.com/book/10.1007/978-3-540-78862-1), 2nd ed., Springer, 1993。邦訳『常微分方程式の数値解析 I 基礎編』
+- Ernst Hairer, Syvert P. Nørsett & Gerhard Wanner, [*Solving Ordinary Differential Equations I: Nonstiff Problems*](https://link.springer.com/book/10.1007/978-3-540-78862-1), 2nd ed., Springer, 1993。邦訳『常微分方程式の数値解析 I 基礎編』
   Runge–Kutta法、多段階法、誤差・収束。ex01–05。
 
-- **銀河動力学**：James Binney & Scott Tremaine, [*Galactic Dynamics*](https://press.princeton.edu/books/paperback/9780691130279/galactic-dynamics), 2nd ed., Princeton University Press, 2008
+- James Binney & Scott Tremaine, [*Galactic Dynamics*](https://press.princeton.edu/books/paperback/9780691130279/galactic-dynamics), 2nd ed., Princeton University Press, 2008
   軌道、重力ポテンシャル、無衝突系と緩和。ex05–08の物理的背景。
 
-- **星団の力学**：Lyman Spitzer, Jr., [*Dynamical Evolution of Globular Clusters*](https://press.princeton.edu/books/ebook/9781400858736/dynamical-evolution-of-globular-clusters-pdf), Princeton University Press, 1987
+- Lyman Spitzer, Jr., [*Dynamical Evolution of Globular Clusters*](https://press.princeton.edu/books/ebook/9781400858736/dynamical-evolution-of-globular-clusters-pdf), Princeton University Press, 1987
   二体緩和と球状星団の進化。講義の衝突系の説明。
 
-- **重力多体系**：Douglas Heggie & Piet Hut, [*The Gravitational Million-Body Problem*](https://assets.cambridge.org/97805217/74864/frontmatter/9780521774864_frontmatter.pdf), Cambridge University Press, 2003（リンクは出版社の序文）
+- Douglas Heggie & Piet Hut, [*The Gravitational Million-Body Problem*](https://assets.cambridge.org/97805217/74864/frontmatter/9780521774864_frontmatter.pdf), Cambridge University Press, 2003（リンクは出版社の序文）
   星団の重力多体問題と数値的な扱い。軌道積分・緩和の発展学習。
-
-出版社リンクには講義当時とは異なる版も含まれます。『シミュレーション天文学』のリンク先は2026年刊行の第2版です。邦訳と原著の対応する版・章番号は、利用する本で確認してください。
-
-### 論文・実装資料
 
 - [Dehnen & Read (2011), N-body simulations of gravitational dynamics](https://arxiv.org/abs/1105.1082)
 - [Hernquist & Ostriker (1992), A self-consistent field method for galactic dynamics](https://adsabs.harvard.edu/abs/1992ApJ...386..375H)
 - [SciPyの球面調和関数の定義](https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.sph_harm_y.html)
+
+出版社リンクには講義当時とは異なる版も含まれます。『シミュレーション天文学』のリンク先は2026年刊行の第2版です。邦訳と原著の対応する版・章番号は、利用する本で確認してください。
 
 論文PDFの再配布はせず、出典へのリンクを掲載しています。
