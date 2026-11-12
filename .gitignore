@@ -1,0 +1,21 @@
+# Local environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.ipython/
+.jupyter/
+.matplotlib/
+.DS_Store
+.env
+.env.*
+!.env.example
+# Executed notebooks, logs, generated figures/animations
+build/
+*.gif
+*.mp4
+*.log
+# Distribution PDFs are intentionally outside this publication candidate
+*.pdf
+*.key

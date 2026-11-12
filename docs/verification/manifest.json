@@ -1,0 +1,175 @@
+[
+  {
+    "notebook": "ex01 euler_accuracy.ipynb",
+    "original_sha256": "53014dc86c5253d0c5f9ad91174e96c3b43b7cae2616f162000fdb288c861916",
+    "candidate_sha256": "a7a9c602ed2fcc7f6f0badf157dfd24f146eb388a1366110f27bd529b2317613",
+    "executed_code_sha256": "c74565c0f585e2f80024d956daece080536b79e1ec7f8ef2f2854fbaec39bf47",
+    "changed_original_cells_zero_based": [
+      0,
+      4,
+      19,
+      24
+    ],
+    "added_markdown_cell_index": 1
+  },
+  {
+    "notebook": "ex02 rk2_accuracy.ipynb",
+    "original_sha256": "8756efdfcc605402d6ca64d9a8898107e7cb62385dcf088997ea6b2d14197991",
+    "candidate_sha256": "807e5b465ade11419b0b5a2c713acfe185349b2a197bc4459f5a9f7a5aa8ef92",
+    "executed_code_sha256": "88598fef667ba379f396edd68c55998f6f94a63a085ccc09a26eda8a013a53dd",
+    "changed_original_cells_zero_based": [
+      0,
+      4,
+      7,
+      10
+    ],
+    "added_markdown_cell_index": 1
+  },
+  {
+    "notebook": "ex03 rk4_accuracy.ipynb",
+    "original_sha256": "32d62de83527c97a12fe451e425a59b6f2cdd5bd14a91caa884e0b8b34fa2ea5",
+    "candidate_sha256": "01c419fa42dc9fecc82a27f0ed508c7edc4ae54bedaf7b61c07c404fda72c1d0",
+    "executed_code_sha256": "eabd23cc2cdace8e9b1ab8faa9d954dcb9c4a2c0bfdb7c5e9fb59cf0022bce93",
+    "changed_original_cells_zero_based": [
+      0,
+      4,
+      6,
+      8,
+      11
+    ],
+    "added_markdown_cell_index": 1
+  },
+  {
+    "notebook": "ex04 adams_accuracy.ipynb",
+    "original_sha256": "279a6c0edf33e61ecbd44deb7a90bf0f9feda8483867a9807deca05450ed2767",
+    "candidate_sha256": "2f1660b08635826647b6d8792c2cdcd29fa43a9b86d896fc716bb6a9b1cf1fa7",
+    "executed_code_sha256": "2486632c69f1a7da7f92c5e75ed265f3f6528226402650a2188218dcf0e615db",
+    "changed_original_cells_zero_based": [
+      0,
+      4,
+      6,
+      8,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "added_markdown_cell_index": 1
+  },
+  {
+    "notebook": "ex05 kepler.ipynb",
+    "original_sha256": "79bb49f0230ceabbea9adb66e31ee205abb65fdeb555d5cf5657551ff4c206b2",
+    "candidate_sha256": "1779ff42d393e49138f5befc31e7765e0fbaab6a2f8fd636a197e5a972ba5c0e",
+    "executed_code_sha256": "370aa2dce2fc0e65d30dd081c1c54d9435a62e7e4d90912a56730f30fa8200c0",
+    "changed_original_cells_zero_based": [
+      0,
+      1,
+      4,
+      5,
+      7,
+      8,
+      9,
+      10,
+      12,
+      13,
+      15,
+      16,
+      18,
+      19,
+      21,
+      22,
+      24,
+      25,
+      26,
+      27
+    ],
+    "added_markdown_cell_index": 1
+  },
+  {
+    "notebook": "ex06a tree.ipynb",
+    "original_sha256": "a737ba2e2a2a5a29f31821bf31b547aba84cd4b1e1403191d8513ac27efe5f9d",
+    "candidate_sha256": "0e0339dabc7e57b4e17cb69e9dc2ad0d1d2c3e257a3f8628ba1afccfdd3f9b17",
+    "executed_code_sha256": "e6481b4c92dc2e28ab8e6be793bffa7df89558c3b08206537db9828105d52511",
+    "changed_original_cells_zero_based": [
+      0,
+      1,
+      6,
+      8,
+      10
+    ],
+    "added_markdown_cell_index": 1
+  },
+  {
+    "notebook": "ex06b tree_gravity.ipynb",
+    "original_sha256": "a4723d88a77cafca245c6cefb3bb93478674d29c76eae880be10e94af57db77c",
+    "candidate_sha256": "9b21630a03f753d4e6d8eea760fd6e51d79124fa072c69ed7bb7d5cd9e7c7ca5",
+    "executed_code_sha256": "04edf3670615687c767d27548ca30fccd86354838661708c34ab780df687c610",
+    "changed_original_cells_zero_based": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "added_markdown_cell_index": 1
+  },
+  {
+    "notebook": "ex07a spheharm_expand.ipynb",
+    "original_sha256": "557ba83d22c14699d55fffb81b388246780648fb16263ede6679f3df33d5abe2",
+    "candidate_sha256": "1c2c2beac9753b6c91ba6e97bd848f43414541629db91315def0e4d5622a7b93",
+    "executed_code_sha256": "cfb3da274b1786ff836c31d314b40b5a4600d6a2595e47aaa588284ef499e7c5",
+    "changed_original_cells_zero_based": [
+      0,
+      1,
+      3,
+      4,
+      5,
+      10,
+      12,
+      14
+    ],
+    "added_markdown_cell_index": 1
+  },
+  {
+    "notebook": "ex07b spheharm.ipynb",
+    "original_sha256": "afec112354d23a506f09efef900bca7eee674949d83ceedd1531e640c2adc221",
+    "candidate_sha256": "db0446c4dcf0c1366e88ce1c7d6276ad06a9dcfdad819da6fad97f75a7cb40db",
+    "executed_code_sha256": "6fac092e3493d062d7134537be81c394783dbafa100e11d37aec4d0a40b63348",
+    "changed_original_cells_zero_based": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "added_markdown_cell_index": 1
+  },
+  {
+    "notebook": "ex08 bfe_ho92.ipynb",
+    "original_sha256": "870105dc67d938d48e606209ad683d4a8c10a295f60ecdbe3a8a5412aeea5e53",
+    "candidate_sha256": "687510548fc34dd4247be0c8f4d9c7b991043f0c99b54c0ca71509b1ea4447d3",
+    "executed_code_sha256": "2dc5439e33037733a396f6f18a3bf304f021c9c3b858326eca3447e0a81820b2",
+    "changed_original_cells_zero_based": [
+      0,
+      1,
+      4,
+      5,
+      7,
+      8,
+      9,
+      11,
+      13,
+      15,
+      17,
+      19,
+      21
+    ],
+    "added_markdown_cell_index": 1
+  }
+]

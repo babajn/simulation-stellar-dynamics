@@ -1,0 +1,88 @@
+{
+  "date": "2026-11-12",
+  "python": "3.12.14",
+  "platform": "Darwin arm64",
+  "mode": "fresh kernel, all nonempty code cells, original long runs retained",
+  "results": [
+    {
+      "notebook": "ex01 euler_accuracy.ipynb",
+      "status": "passed",
+      "seconds": 32.94,
+      "code_cells": 12,
+      "executed_cells": 12,
+      "error": null
+    },
+    {
+      "notebook": "ex02 rk2_accuracy.ipynb",
+      "status": "passed",
+      "seconds": 2.2,
+      "code_cells": 7,
+      "executed_cells": 7,
+      "error": null
+    },
+    {
+      "notebook": "ex03 rk4_accuracy.ipynb",
+      "status": "passed",
+      "seconds": 1.99,
+      "code_cells": 7,
+      "executed_cells": 7,
+      "error": null
+    },
+    {
+      "notebook": "ex04 adams_accuracy.ipynb",
+      "status": "passed",
+      "seconds": 2.45,
+      "code_cells": 10,
+      "executed_cells": 10,
+      "error": null
+    },
+    {
+      "notebook": "ex05 kepler.ipynb",
+      "status": "passed",
+      "seconds": 206.12,
+      "code_cells": 17,
+      "executed_cells": 17,
+      "error": null
+    },
+    {
+      "notebook": "ex06a tree.ipynb",
+      "status": "passed",
+      "seconds": 4.59,
+      "code_cells": 6,
+      "executed_cells": 6,
+      "error": null
+    },
+    {
+      "notebook": "ex06b tree_gravity.ipynb",
+      "status": "passed",
+      "seconds": 16.68,
+      "code_cells": 9,
+      "executed_cells": 9,
+      "error": null
+    },
+    {
+      "notebook": "ex07a spheharm_expand.ipynb",
+      "status": "passed",
+      "seconds": 56.08,
+      "code_cells": 11,
+      "executed_cells": 11,
+      "error": null
+    },
+    {
+      "notebook": "ex07b spheharm.ipynb",
+      "status": "passed",
+      "seconds": 5.3,
+      "code_cells": 3,
+      "executed_cells": 3,
+      "error": null
+    },
+    {
+      "notebook": "ex08 bfe_ho92.ipynb",
+      "status": "passed",
+      "seconds": 28.57,
+      "code_cells": 11,
+      "executed_cells": 11,
+      "error": null
+    }
+  ]
+}

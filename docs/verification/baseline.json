@@ -1,0 +1,82 @@
+[
+  {
+    "notebook": "ex01 euler_accuracy.ipynb",
+    "status": "passed",
+    "seconds": 25.71,
+    "code_cells": 12,
+    "executed_cells": 12,
+    "reason": null
+  },
+  {
+    "notebook": "ex02 rk2_accuracy.ipynb",
+    "status": "passed",
+    "seconds": 2.27,
+    "code_cells": 7,
+    "executed_cells": 7,
+    "reason": null
+  },
+  {
+    "notebook": "ex03 rk4_accuracy.ipynb",
+    "status": "passed",
+    "seconds": 2.09,
+    "code_cells": 7,
+    "executed_cells": 7,
+    "reason": null
+  },
+  {
+    "notebook": "ex04 adams_accuracy.ipynb",
+    "status": "passed",
+    "seconds": 2.54,
+    "code_cells": 10,
+    "executed_cells": 10,
+    "reason": null
+  },
+  {
+    "notebook": "ex05 kepler.ipynb",
+    "status": "passed",
+    "seconds": 212.99,
+    "code_cells": 17,
+    "executed_cells": 17,
+    "reason": null
+  },
+  {
+    "notebook": "ex06a tree.ipynb",
+    "status": "passed",
+    "seconds": 2.43,
+    "code_cells": 6,
+    "executed_cells": 6,
+    "reason": null
+  },
+  {
+    "notebook": "ex06b tree_gravity.ipynb",
+    "status": "passed",
+    "seconds": 31.97,
+    "code_cells": 9,
+    "executed_cells": 9,
+    "reason": null
+  },
+  {
+    "notebook": "ex07a spheharm_expand.ipynb",
+    "status": "failed",
+    "seconds": 2.02,
+    "code_cells": 11,
+    "executed_cells": 1,
+    "reason": "sph_harm import unavailable"
+  },
+  {
+    "notebook": "ex07b spheharm.ipynb",
+    "status": "failed",
+    "seconds": 1.56,
+    "code_cells": 3,
+    "executed_cells": 1,
+    "reason": "sph_harm import unavailable"
+  },
+  {
+    "notebook": "ex08 bfe_ho92.ipynb",
+    "status": "failed",
+    "seconds": 1.87,
+    "code_cells": 11,
+    "executed_cells": 1,
+    "reason": "sph_harm import unavailable"
+  }
+]

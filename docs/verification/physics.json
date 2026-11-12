@@ -1,0 +1,40 @@
+{
+  "ho92_normalization_relative_error": 4.440892098500626e-16,
+  "hernquist_extended_grid_relative_error": 2.960140015551005e-06,
+  "kepler_position_orders": {
+    "euler_method": 0.9899702972356638,
+    "rk2_heun_method": 1.9948222514150145,
+    "rk2_midpoint_method": 1.9993385350458515,
+    "rk4_method": 4.009774963026014,
+    "adams_bashforth_moulton_2nd": 1.9864204082556198,
+    "adams_bashforth_moulton_4th": 3.9710537689013776,
+    "leapfrog_method": 2.000006588795691
+  },
+  "leapfrog_angular_momentum_max_error": 9.325873406851315e-15,
+  "leapfrog_reversal_error": 7.313460046776794e-13,
+  "scalar_orders": {
+    "euler_method": 1.0059688550262464,
+    "rk2_heun_method": 2.0275584296976104,
+    "rk2_midpoint_method": 2.0275584296976104,
+    "rk4_method": 4.030082926408832,
+    "adams_bashforth_moulton_2nd": 2.0862691217630203,
+    "adams_bashforth_moulton_4th": 4.130610639156193
+  },
+  "spherical_reconstruction_errors": [
+    4.6629367034256575e-15,
+    1.1102230246251565e-16,
+    3.9968028886505635e-15
+  ],
+  "uniform_potential_max_error": 3.4445992724840835e-09,
+  "plummer_rmax10_omitted_potential": 0.0009851853368415735,
+  "tree": {
+    "ex06a": {
+      "theta0_max_abs_error": 2.1316282072803006e-14,
+      "theta03_max_relative_error": 0.010521605699785544
+    },
+    "ex06b": {
+      "theta0_max_abs_error": 2.1316282072803006e-14,
+      "theta03_max_relative_error": 0.010521605699785745
+    }
+  }
+}
