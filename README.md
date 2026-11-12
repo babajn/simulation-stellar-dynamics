@@ -1,6 +1,6 @@
 # シミュレーション天文学の数値実験
 
-馬場淳一が、学生の皆さんの学習・復習のために公開しているJupyter Notebook教材です。総研大2024年度「シミュレーション天文学」で用いた教材をもとに、常微分方程式の数値解法、天体の軌道積分、重力計算を扱う10本のNotebookをまとめています。
+総研大2024年度「シミュレーション天文学」で用いた教材をもとに、常微分方程式の数値解法、天体の軌道積分、重力計算を扱うJupyter Notebook教材を学習・復習のために公開しています。
 
 数式で学んだ計算手法を自分で実装・実行し、計算精度や保存量、計算時間を比較しながら、天文学における数値シミュレーションの基礎を身につけることを目指します。
 
@@ -16,16 +16,16 @@ Pythonの基本的な文法、微積分、ベクトル、Newton力学の初歩�
 
 | Notebook | 内容 | 必要な前提 |
 |---|---|---|
-| ex01 euler_accuracy | 前進・後退Euler、線形／非線形減衰 | 微分、Taylor展開 |
-| ex02 rk2_accuracy | Heunと陽的中点法 | ex01 |
-| ex03 rk4_accuracy | 古典RK4の収束 | ex02 |
-| ex04 adams_accuracy | 2次・4次Adams予測修正 | ex03 |
-| ex05 kepler | Kepler軌道、保存量、Leapfrog | ベクトル力学、ex01–04 |
-| ex06a tree | 四分木の分割・可視化 | 再帰、質量中心 |
-| ex06b tree_gravity | Barnes–Hutと直接和の比較 | ex06a、Newton重力 |
-| ex07b spheharm | 球面調和関数の可視化 | 複素数、球座標 |
-| ex07a spheharm_expand | 密度射影と重力ポテンシャル | ex07b、積分 |
-| ex08 bfe_ho92 | Hernquist–Ostriker基底展開 | ex07a、Poisson方程式 |
+| [ex01 euler_accuracy](notebooks/ex01%20euler_accuracy.ipynb) | 前進・後退Euler、線形／非線形減衰 | 微分、Taylor展開 |
+| [ex02 rk2_accuracy](notebooks/ex02%20rk2_accuracy.ipynb) | Heunと陽的中点法 | ex01 |
+| [ex03 rk4_accuracy](notebooks/ex03%20rk4_accuracy.ipynb) | 古典RK4の収束 | ex02 |
+| [ex04 adams_accuracy](notebooks/ex04%20adams_accuracy.ipynb) | 2次・4次Adams予測修正 | ex03 |
+| [ex05 kepler](notebooks/ex05%20kepler.ipynb) | Kepler軌道、保存量、Leapfrog | ベクトル力学、ex01–04 |
+| [ex06a tree](notebooks/ex06a%20tree.ipynb) | 四分木の分割・可視化 | 再帰、質量中心 |
+| [ex06b tree_gravity](notebooks/ex06b%20tree_gravity.ipynb) | Barnes–Hutと直接和の比較 | ex06a、Newton重力 |
+| [ex07b spheharm](notebooks/ex07b%20spheharm.ipynb) | 球面調和関数の可視化 | 複素数、球座標 |
+| [ex07a spheharm_expand](notebooks/ex07a%20spheharm_expand.ipynb) | 密度射影と重力ポテンシャル | ex07b、積分 |
+| [ex08 bfe_ho92](notebooks/ex08%20bfe_ho92.ipynb) | Hernquist–Ostriker基底展開 | ex07a、Poisson方程式 |
 
 Notebookの番号は講義時のものを使用しています。球面調和関数は、まずex07bで形を確認してからex07aの重力ポテンシャル計算へ進むと理解しやすくなります。
 
