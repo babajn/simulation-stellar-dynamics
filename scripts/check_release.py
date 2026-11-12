@@ -1,8 +1,13 @@
 """Check candidate content without printing detected secret values."""
 from pathlib import Path
-import json,re,sys
+import hashlib,json,re,sys
 import nbformat
 ROOT=Path(__file__).resolve().parents[1]
+# Exact reviewed asset only. Review PDF text, metadata, links and page images
+# before updating this digest; arbitrary PDFs remain excluded.
+REVIEWED_ASSETS={
+ 'docs/lecture_baba_all.pdf':'1c83dfab1a6fa09dfc582fbc188a193e3bbbb30651d0e2d6b37b8e7ba802772d',
+}
 SKIP={'.git','build','.venv','venv','__pycache__','.ipynb_checkpoints'}
 PATTERNS={
  'private key':r'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----',
@@ -17,6 +22,10 @@ def main():
   rel=p.relative_to(ROOT)
   if any(x in SKIP for x in rel.parts) or not p.is_file():continue
   files.append(p)
+  if rel.as_posix() in REVIEWED_ASSETS:
+   if hashlib.sha256(p.read_bytes()).hexdigest()!=REVIEWED_ASSETS[rel.as_posix()]:
+    issues.append((str(rel),'reviewed asset changed; review required'))
+   continue
   if p.stat().st_size>10*1024**2:issues.append((str(rel),'over 10 MiB'))
   if p.suffix.lower() in {'.pdf','.key','.gif','.mp4'}:issues.append((str(rel),'excluded asset'))
   text=p.read_text(errors='replace')
