@@ -67,7 +67,7 @@ python scripts/check_release.py
 
 2026年11月12日に、数値計算・実行環境・説明を見直し、Notebook全10本の全セル実行と数値検証を行いました。修正内容と検証の範囲は [検証報告](docs/validation.md) にまとめています。
 
-このリポジトリでは講義の実演用Notebookと、実行・検証用ファイル、発展的な学習のための補助資料を配布しています。講義PDFは含みません。誤りや説明が分かりにくい箇所を見つけた場合は、[Issues](https://github.com/babajn/simulation-astronomy/issues) で、該当するNotebook名と箇所をお知らせください。
+このリポジトリでは講義の実演用Notebookと、実行・検証用ファイル、発展的な学習のための補助資料を配布しています。講義PDFは含みません。誤りや説明が分かりにくい箇所を見つけた場合は、[Issues](https://github.com/babajn/simulation-stellar-dynamics/issues) で、該当するNotebook名と箇所をお知らせください。
 
 ライセンスは現在未設定です。再配布・改変物の公開などに関する利用条件は、正式なライセンスを定めた際に明記します。参考資料の権利は各権利者に帰属します。
 
