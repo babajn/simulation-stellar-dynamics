@@ -1,8 +1,7 @@
 {
-  "scope": "10 candidate notebooks; original saved outputs removed",
-  "original_email_occurrences": 10,
-  "candidate_pattern_matches": 0,
-  "candidate_attachments": 0,
-  "candidate_saved_outputs": 0,
-  "limitations": "Pattern scan plus source review; provenance of third-party text/code requires author confirmation."
+  "scope": "Current release files only; Git commit author/committer metadata is not scanned",
+  "pattern_matches": 0,
+  "notebook_attachments": 0,
+  "notebook_saved_outputs": 0,
+  "limitations": "Pattern checks do not establish absence of all secrets or copyright provenance. Existing Git history has not been rewritten."
 }

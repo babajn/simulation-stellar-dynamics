@@ -1,19 +1,29 @@
 """Independent numerical checks of the functions actually defined in the notebooks."""
 from pathlib import Path
-import ast, contextlib, io, json, os, unittest
+import ast, contextlib, io, json, os, sys, unittest
 import numpy as np
 from scipy.integrate import quad
 ROOT=Path(__file__).resolve().parents[1]
 os.environ.setdefault('MPLCONFIGDIR', str(ROOT/'build'/'.matplotlib'))
+sys.path.insert(0, str(ROOT/'notebooks'))
 METRICS={}
 def load(prefix):
     p=next((ROOT/'notebooks').glob(prefix+' *.ipynb'))
     cells=json.loads(p.read_text())['cells']
-    env={'__name__':'validation','G':1.,'M':1.,'rho0':1.,'depth_colors':['red','blue','green']}
+    env={'__name__':'validation'}
     for c in cells:
         if c['cell_type']!='code': continue
         tree=ast.parse(''.join(c['source']))
-        tree.body=[n for n in tree.body if isinstance(n,(ast.Import,ast.ImportFrom,ast.FunctionDef,ast.ClassDef))]
+        selected=[]
+        for node in tree.body:
+            if isinstance(node,(ast.Import,ast.ImportFrom,ast.FunctionDef,ast.ClassDef)):
+                selected.append(node)
+            elif isinstance(node, ast.Assign):
+                # Read literal constants from the notebook, never invent fallback values.
+                try: ast.literal_eval(node.value)
+                except (ValueError, TypeError): continue
+                selected.append(node)
+        tree.body=selected
         with contextlib.redirect_stdout(io.StringIO()): exec(compile(tree,str(p),'exec'),env)
     return env
 class PhysicsChecks(unittest.TestCase):
@@ -65,6 +75,18 @@ class PhysicsChecks(unittest.TestCase):
         drift=float(np.max(abs(angular-.7)));self.assertLess(drift,1e-11)
         _,rr,vv,_=fn(r[-1],-v[-1],0.,20.,.002)
         rev=float(np.linalg.norm(rr[-1]-r0)+np.linalg.norm(vv[-1]+v0));self.assertLess(rev,1e-8)
+        # A circular orbit's invariant error can have a higher slope than position error.
+        poserr=[];enerr=[]
+        for h in [.02,.01]:
+            _,rp,_,ep=fn(np.array([1.,0.]),np.array([0.,1.]),0.,10.,h)
+            poserr.append(np.linalg.norm(rp[-1]-[np.cos(10.),np.sin(10.)]))
+            enerr.append(ep[-1])
+        position_order=float(np.log2(poserr[0]/poserr[1]))
+        energy_slope=float(np.log2(enerr[0]/enerr[1]))
+        self.assertAlmostEqual(position_order,2.,delta=.1)
+        self.assertAlmostEqual(energy_slope,4.,delta=.15)
+        METRICS['circular_leapfrog_position_order']=position_order
+        METRICS['circular_leapfrog_energy_slope']=energy_slope
         METRICS['kepler_position_orders']=orders;METRICS['leapfrog_angular_momentum_max_error']=drift;METRICS['leapfrog_reversal_error']=rev
     def test_tree(self):
         metrics={}
@@ -90,12 +112,47 @@ class PhysicsChecks(unittest.TestCase):
             approx=np.array([tree.calculate_gravitational_force(b,theta=.3) for b in bodies])
             metrics[prefix]={'theta0_max_abs_error':float(np.max(abs(exact-direct))),'theta03_max_relative_error':float(np.max(np.linalg.norm(approx-direct,axis=1)/np.linalg.norm(direct,axis=1)))}
         METRICS['tree']=metrics
+    def test_tree_large_sample_and_explicit_G(self):
+        e=load('ex06a')
+        self.assertIn('G',e)
+        tree=e['BarnesHut']((-1,1,-1,1))
+        rng=np.random.default_rng(42)
+        for xy in rng.uniform(-1,1,(1000,2)):
+            tree.insert(e['Body'](xy,1.))
+        self.assertEqual(tree.root.mass,1000)
+        e['G']=2.
+        tree=e['BarnesHut']((-2,2,-2,2))
+        a,b=e['Body']([0,0],1.),e['Body']([1,0],1.)
+        tree.insert(a);tree.insert(b)
+        np.testing.assert_allclose(tree.calculate_gravitational_force(a,0),[2.,0.])
+    def test_adams_evaluations_and_stability(self):
+        e=load('ex04'); counts={}
+        for name,startup,per_step in [('adams_bashforth_moulton_2nd',1,3),('adams_bashforth_moulton_4th',3,5)]:
+            calls=[]
+            def f(t,y,a):calls.append(t);return -y
+            e[name](f,1.,0.,1.,.1,1.)
+            self.assertEqual(len(calls),4*startup+per_step*(10-startup))
+            counts[name]=per_step
+        # Derive PECE recurrence coefficients from AB/AM weights, then test its roots.
+        def root_radius(z, ab, am):
+            k=len(ab); predictor=z*np.array(ab,float);predictor[0]+=1
+            coeff=am[0]*z*predictor
+            coeff[0]+=1
+            coeff[:len(am)-1]+=z*np.array(am[1:])
+            return np.max(abs(np.roots(np.r_[1.,-coeff])))
+        ab2=[1.5,-.5];am2=[.5,.5]
+        ab4=np.array([55,-59,37,-9])/24;am4=np.array([9,19,-5,1])/24
+        self.assertLess(root_radius(-1.99,ab2,am2),1.)
+        self.assertGreater(root_radius(-2.01,ab2,am2),1.)
+        self.assertLess(root_radius(-1.28,ab4,am4),1.)
+        self.assertGreater(root_radius(-1.29,ab4,am4),1.)
+        METRICS['adams_function_evaluations_per_regular_step']=counts
     def test_spherical_harmonics(self):
         e=load('ex07a');c=e['compute_rho_lm']
         np.testing.assert_allclose(c(0,0,.5,e['uniform_sphere']),[np.sqrt(4*np.pi),0],atol=1e-12)
         np.testing.assert_allclose(c(1,0,.5,e['dipole_distribution']),[np.sqrt(4*np.pi/3),0],atol=1e-12)
         fn=e['reconstruct_density_cached']; errors=[]
-        for rho in [e['uniform_sphere'],e['dipole_distribution'],e['triaxial_distribution']]:
+        for rho in [e['uniform_sphere'],e['dipole_distribution'],e['monopole_dipole_distribution']]:
             value=fn(3,.5,.8,1.2,rho);errors.append(float(abs(value-rho(.5,.8,1.2))))
             self.assertLess(errors[-1],1e-12)
             np.testing.assert_allclose(c(1,1,.5,rho,24,48),c(1,1,.5,rho,48,96),atol=1e-12)
@@ -134,6 +191,10 @@ class PhysicsChecks(unittest.TestCase):
         a=e['compute_potential_for_density'](e['uniform_sphere'],r,theta,az,n_max=2,l_max=1,m_max=0)
         b=e['compute_potential_for_density'](lambda r,t,p:2*e['uniform_sphere'](r,t,p),r,theta,az,n_max=2,l_max=1,m_max=0)
         np.testing.assert_allclose(b,2*a,atol=1e-12)
+        e['G']=2.
+        doubled=e['compute_potential_for_density'](e['uniform_sphere'],r,theta,az,n_max=2,l_max=1,m_max=0)
+        np.testing.assert_allclose(doubled,2*a,atol=1e-12)
+        e['G']=1.
         METRICS['ho92_normalization_relative_error']=max(orth);METRICS['hernquist_extended_grid_relative_error']=err
 if __name__=='__main__':
     suite=unittest.defaultTestLoader.loadTestsFromTestCase(PhysicsChecks)

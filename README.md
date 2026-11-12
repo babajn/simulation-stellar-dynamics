@@ -44,7 +44,7 @@ Windowsでは有効化を `.venv\Scripts\activate` に置き換えます。別�
 
 検証環境の間接依存も固定する場合は `python -m pip install -r requirements-lock.txt` を使用します。
 
-JupyterLabが開いたら、`notebooks/` から学習するNotebookを選んでください。各Notebookは独立しています。新しいカーネルで上から全セルを実行してください。外部データやAPIキーは不要です。ex06aは実行ディレクトリにGIFを保存します。ex05末尾には各手法100万ステップの比較が2組あり、数分以上かかる場合があります。実行時間はCPUや同時負荷によって変わり、乱数を固定しても時間測定は一致しません。
+JupyterLabが開いたら、`notebooks/` から学習するNotebookを選んでください。各Notebookは個別に実行できます。ex06a・ex06bは同じフォルダの `tree_core.py` を使用するため、Notebookだけでなく教材フォルダ全体をダウンロードしてください。新しいカーネルで上から全セルを実行してください。外部データやAPIキーは不要です。ex06aは実行ディレクトリにGIFを保存します。ex05末尾には各手法100万ステップの比較が2組あり、数分以上かかる場合があります。ex05冒頭で `QUICK_DEMO = True` にすると、この2組の終了時刻だけを1/10に短縮できます（既定値は `False`）。実行時間はCPUや同時負荷によって変わり、乱数を固定しても時間測定は一致しません。
 
 ## 数値検証を行う場合
 
@@ -57,7 +57,7 @@ python scripts/execute_notebooks.py --timeout 900
 python scripts/check_release.py
 ```
 
-数値検証はNotebookの関数定義自体を読み込みます。全実行はNotebookごとに現在のPython環境の新規カーネルを起動し、元の出力を使わず実行します。実行済みNotebook・GIF・ログは `build/` に保存し、Git管理から除外します。配布Notebookの出力欄は空です。
+数値検証はNotebookの関数定義自体を読み込みます。全実行はNotebookごとに現在のPython環境の新規カーネルを起動し、元の出力を使わず実行します。実行済みNotebook・GIF・ログは `build/` に保存し、Git管理から除外します。配布Notebookの出力欄は空です。Jupyterカーネルを起動できない環境では `python scripts/execute_python.py` で各Notebookのコードセルを独立したPythonプロセスで実行し、図を `build/python-executed/` に保存できます。この方法はJupyter上の数式やウィジェットの表示を検証するものではありません。
 
 ## 実演の計算モデルと発展的な学習
 
@@ -65,7 +65,7 @@ python scripts/check_release.py
 
 ## 教材の更新と利用条件
 
-2026年11月12日に、数値計算・実行環境・説明を見直し、Notebook全10本の全セル実行と数値検証を行いました。修正内容と検証の範囲は [検証報告](docs/validation.md) にまとめています。
+2026年11月12日に、数値計算・実行環境・説明を見直しました。査読後の改訂では、解法の説明、誤差図、四分木の共通実装、検証方法を更新しています。修正内容と検証の範囲は [検証報告](docs/validation.md) にまとめています。
 
 このリポジトリでは講義の実演用Notebookと、実行・検証用ファイル、発展的な学習のための補助資料を配布しています。講義PDFは含みません。誤りや説明が分かりにくい箇所を見つけた場合は、[Issues](https://github.com/babajn/simulation-stellar-dynamics/issues) で、該当するNotebook名と箇所をお知らせください。
 

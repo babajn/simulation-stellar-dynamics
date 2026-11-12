@@ -1,6 +1,12 @@
 {
+  "adams_function_evaluations_per_regular_step": {
+    "adams_bashforth_moulton_2nd": 3,
+    "adams_bashforth_moulton_4th": 5
+  },
   "ho92_normalization_relative_error": 4.440892098500626e-16,
   "hernquist_extended_grid_relative_error": 2.960140015551005e-06,
+  "circular_leapfrog_position_order": 1.9998329940770583,
+  "circular_leapfrog_energy_slope": 3.999549310808255,
   "kepler_position_orders": {
     "euler_method": 0.9899702972356638,
     "rk2_heun_method": 1.9948222514150145,
@@ -34,7 +40,7 @@
     },
     "ex06b": {
       "theta0_max_abs_error": 2.1316282072803006e-14,
-      "theta03_max_relative_error": 0.010521605699785745
+      "theta03_max_relative_error": 0.010521605699785544
     }
   }
 }

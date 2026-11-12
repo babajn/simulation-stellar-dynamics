@@ -1,88 +1,122 @@
-{
-  "date": "2026-11-12",
-  "python": "3.12.14",
-  "platform": "Darwin arm64",
-  "mode": "fresh kernel, all nonempty code cells, original long runs retained",
-  "results": [
-    {
-      "notebook": "ex01 euler_accuracy.ipynb",
-      "status": "passed",
-      "seconds": 32.94,
-      "code_cells": 12,
-      "executed_cells": 12,
-      "error": null
-    },
-    {
-      "notebook": "ex02 rk2_accuracy.ipynb",
-      "status": "passed",
-      "seconds": 2.2,
-      "code_cells": 7,
-      "executed_cells": 7,
-      "error": null
-    },
-    {
-      "notebook": "ex03 rk4_accuracy.ipynb",
-      "status": "passed",
-      "seconds": 1.99,
-      "code_cells": 7,
-      "executed_cells": 7,
-      "error": null
-    },
-    {
-      "notebook": "ex04 adams_accuracy.ipynb",
-      "status": "passed",
-      "seconds": 2.45,
-      "code_cells": 10,
-      "executed_cells": 10,
-      "error": null
-    },
-    {
-      "notebook": "ex05 kepler.ipynb",
-      "status": "passed",
-      "seconds": 206.12,
-      "code_cells": 17,
-      "executed_cells": 17,
-      "error": null
-    },
-    {
-      "notebook": "ex06a tree.ipynb",
-      "status": "passed",
-      "seconds": 4.59,
-      "code_cells": 6,
-      "executed_cells": 6,
-      "error": null
-    },
-    {
-      "notebook": "ex06b tree_gravity.ipynb",
-      "status": "passed",
-      "seconds": 16.68,
-      "code_cells": 9,
-      "executed_cells": 9,
-      "error": null
-    },
-    {
-      "notebook": "ex07a spheharm_expand.ipynb",
-      "status": "passed",
-      "seconds": 56.08,
-      "code_cells": 11,
-      "executed_cells": 11,
-      "error": null
-    },
-    {
-      "notebook": "ex07b spheharm.ipynb",
-      "status": "passed",
-      "seconds": 5.3,
-      "code_cells": 3,
-      "executed_cells": 3,
-      "error": null
-    },
-    {
-      "notebook": "ex08 bfe_ho92.ipynb",
-      "status": "passed",
-      "seconds": 28.57,
-      "code_cells": 11,
-      "executed_cells": 11,
-      "error": null
-    }
-  ]
-}
+[
+  {
+    "status": "passed",
+    "code_sha256": "30cb4e49ef8df8ad9c25b57ce493f86ef82fd4c8096372b0c78cde3a833101e7",
+    "error": null,
+    "executed_cells": 12,
+    "code_cells": 12,
+    "figures": 8,
+    "notebook": "ex01 euler_accuracy.ipynb",
+    "engine": "fresh-python-process / Matplotlib Agg",
+    "seconds": 27.63,
+    "quick_demo": null
+  },
+  {
+    "status": "passed",
+    "code_sha256": "b7b2019fae0453a1f38010cc64d9aa08092adf1f43e182b32c69ba4a7313831c",
+    "error": null,
+    "executed_cells": 7,
+    "code_cells": 7,
+    "figures": 2,
+    "notebook": "ex02 rk2_accuracy.ipynb",
+    "engine": "fresh-python-process / Matplotlib Agg",
+    "seconds": 1.44,
+    "quick_demo": null
+  },
+  {
+    "status": "passed",
+    "code_sha256": "be919bfd548fa5686e72c45cdff0c2f3430c9466173e5cb5b3ad416bc4a25ebe",
+    "error": null,
+    "executed_cells": 7,
+    "code_cells": 7,
+    "figures": 1,
+    "notebook": "ex03 rk4_accuracy.ipynb",
+    "engine": "fresh-python-process / Matplotlib Agg",
+    "seconds": 1.54,
+    "quick_demo": null
+  },
+  {
+    "status": "passed",
+    "code_sha256": "5149eb4e7a3d8c887577bb6416af742fa7364d73d59802dfdf47d24f2754351e",
+    "error": null,
+    "executed_cells": 10,
+    "code_cells": 10,
+    "figures": 2,
+    "notebook": "ex04 adams_accuracy.ipynb",
+    "engine": "fresh-python-process / Matplotlib Agg",
+    "seconds": 1.76,
+    "quick_demo": null
+  },
+  {
+    "status": "passed",
+    "code_sha256": "10ffa2acde4e580e7972eea24a89f8b4d5e0be7181a43e77fa2b945c53b7c959",
+    "error": null,
+    "executed_cells": 17,
+    "code_cells": 17,
+    "figures": 8,
+    "notebook": "ex05 kepler.ipynb",
+    "engine": "fresh-python-process / Matplotlib Agg",
+    "seconds": 200.95,
+    "quick_demo": false
+  },
+  {
+    "status": "passed",
+    "code_sha256": "c96c8d2952817b6190af71e64de2e5e2a5fdf679c746787251cb870fdf6ce1f0",
+    "error": null,
+    "executed_cells": 6,
+    "code_cells": 6,
+    "figures": 2,
+    "notebook": "ex06a tree.ipynb",
+    "engine": "fresh-python-process / Matplotlib Agg",
+    "seconds": 1.73,
+    "quick_demo": null
+  },
+  {
+    "status": "passed",
+    "code_sha256": "33d7bd5c3f8ad86a6d1fbd935b6408b9df99d36b1aa582280ea46e3773b79005",
+    "error": null,
+    "executed_cells": 9,
+    "code_cells": 9,
+    "figures": 4,
+    "notebook": "ex06b tree_gravity.ipynb",
+    "engine": "fresh-python-process / Matplotlib Agg",
+    "seconds": 13.95,
+    "quick_demo": null
+  },
+  {
+    "status": "passed",
+    "code_sha256": "7d7c48e806415d615d6e1beec344489bd002c5999550582cce346414bdb9b626",
+    "error": null,
+    "executed_cells": 11,
+    "code_cells": 11,
+    "figures": 4,
+    "notebook": "ex07a spheharm_expand.ipynb",
+    "engine": "fresh-python-process / Matplotlib Agg",
+    "seconds": 57.99,
+    "quick_demo": null
+  },
+  {
+    "status": "passed",
+    "code_sha256": "2317e3c14395e1b2d1a433ecf425331e99bb7aee46f33c38bd9d7b14d917d739",
+    "error": null,
+    "executed_cells": 3,
+    "code_cells": 3,
+    "figures": 2,
+    "notebook": "ex07b spheharm.ipynb",
+    "engine": "fresh-python-process / Matplotlib Agg",
+    "seconds": 10.94,
+    "quick_demo": null
+  },
+  {
+    "status": "passed",
+    "code_sha256": "4b53110fab668e7af752438a9a3b862c3abde9c9c9d7ba9bb424172f80f46cef",
+    "error": null,
+    "executed_cells": 11,
+    "code_cells": 11,
+    "figures": 8,
+    "notebook": "ex08 bfe_ho92.ipynb",
+    "engine": "fresh-python-process / Matplotlib Agg",
+    "seconds": 4.2,
+    "quick_demo": null
+  }
+]

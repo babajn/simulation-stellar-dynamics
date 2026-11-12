@@ -1,6 +1,6 @@
 """Execute every notebook in a fresh kernel; store results outside source notebooks."""
 from pathlib import Path
-import argparse, json, os, sys, time
+import argparse, json, os, sys, time, shutil
 import nbformat
 from nbclient import NotebookClient
 from jupyter_client import KernelManager
@@ -23,6 +23,10 @@ def main():
     os.environ.setdefault('MPLCONFIGDIR', str(args.output.resolve() / '.matplotlib'))
     os.environ.setdefault('IPYTHONDIR', str(args.output.resolve() / '.ipython'))
     os.environ.setdefault('JUPYTER_RUNTIME_DIR', str(args.output.resolve() / '.jupyter'))
+    # Keep notebook-local helper modules available in the isolated execution directory.
+    for helper in args.source.glob('*.py'):
+        target=args.output/helper.name
+        if helper.resolve()!=target.resolve(): shutil.copy2(helper,target)
     results=[]
     for path in sorted(args.source.glob(args.pattern)):
         print('START',path.name,flush=True)
