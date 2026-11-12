@@ -100,3 +100,4 @@ python scripts/check_release.py
 
 ## 関連する公開教材
 - 馬場淳一『[銀河力学で学ぶ数値計算法](https://github.com/babajn/galactic-dynamics-numerical-methods)』（2026年度 鹿児島大学物理宇宙セミナー資料）
+- 馬場淳一『[銀河相互作用のシミュレーション入門](https://github.com/babajn/galaxy-interaction-course/tree/main)』（Pythonで学ぶ制限三体近似）
